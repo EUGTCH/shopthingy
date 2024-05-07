@@ -1,0 +1,11 @@
+:root{
+    --primery-color:#3454d1;
+    --secondery-blue-color:#34d1bf;
+    --ourlight-color:#efefef;
+}
+.bg-primery{
+    background-color:var(--primery-color)!important;
+}
+.bg-ourLight{
+    background-color:var(--ourlight-color)!important;
+}
