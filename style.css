@@ -9,6 +9,7 @@
 .bg-ourLight{
     background-color:var(--ourlight-color)!important;
 }
+/*slider animation*/
 .slider-animation{
     animation: fadein 1s;
     opacity: 0;
@@ -20,3 +21,4 @@
         opacity: 1;
     }
 }
+/*slider animation*/

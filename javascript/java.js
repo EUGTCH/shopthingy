@@ -1,4 +1,5 @@
 var $=document;
+/* slider */
 let sliderMainPic=[
     sliderPic="image/slider/shopping-concept-close-up-portrait-young-beautiful-attractive-redhair-girl-smiling-looking-camera.jpg",
     sliderPic="image/slider/young-man-holding-shopping-bags-showing-mobile-phone-screen-money-application-standing-yell.jpg",
@@ -24,3 +25,4 @@ function nextSlide(){
     }
 }
 setInterval(nextSlide,5000)
+/* slider */
