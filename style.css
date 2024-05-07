@@ -9,3 +9,14 @@
 .bg-ourLight{
     background-color:var(--ourlight-color)!important;
 }
+.slider-animation{
+    animation: fadein 1s;
+    opacity: 0;
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
