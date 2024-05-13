@@ -9,9 +9,35 @@
 .bg-ourLight{
     background-color:var(--ourlight-color)!important;
 }
+@media only screen and (max-width: 600px) {
+    #content1,#content2,#content3{
+        font-size: 10px !important;
+    }
+    /* @keyframes content1 {
+        from{
+        left: -100vw;
+        }to{
+        left: 300px !important;
+        }
+    }
+  @keyframes content2 {
+    from{
+    left: -100vw;
+    }to{
+    right: 300px;
+    }
+    }
+    @keyframes content3 {
+        from{
+        left: -100vw;
+        }to{
+        left: 300px !important;
+        }
+    } */
+}
 /*slider animation*/
 .slider-animation{
-    animation: fadein 1s;
+    animation: fadein 2s;
     opacity: 0;
 }
 @keyframes fadein{
@@ -21,4 +47,59 @@
         opacity: 1;
     }
 }
+.slider-content{
+    display: none;
+    position: absolute;
+}
+#content1{
+    text-align: justify;
+    width: 400px;
+    height: 300px;
+    font-size: 1.5rem;
+    animation: content1 1s;
+    top:35%;
+    left: -100vw;
+    animation-fill-mode: forwards;
+}
+@keyframes content1 {
+    from{
+    left: -100vw;
+    }to{
+    left: 60vw;
+    }
+}
+#content2{
+    text-align: justify;
+    width: 300px;
+    font-size: 1.5rem;
+    animation: content2 1s;
+    top:35%;
+    right: -100vw;
+    animation-fill-mode: forwards;
+}
+@keyframes content2 {
+    from{
+    left: -100vw;
+    }to{
+    right: 70vw;
+    }
+}
+
+#content3{
+    text-align: justify;
+    width: 300px;
+    font-size: 1.5rem;
+    top:35%;
+    left:-100vw;
+    animation: content3 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes content3 {
+    from{
+    left: -100vw;
+    }to{
+    left: 50vw;
+    }
+}
+
 /*slider animation*/

@@ -12,17 +12,33 @@ slider.classList.add('slider-animation');
 slider.addEventListener('animationend',()=>{
 slider.classList.remove('slider-animation');
 })
+if(index===0){
+    document.getElementById('content3').style.display="none";
+    document.getElementById('content1').style.display="block";
+}
 function nextSlide(){
     console.log(index)
     index++
+    switch(true){
+        case index===1:
+            document.getElementById('content1').style.display="none";
+            document.getElementById('content2').style.display="block";
+        break;
+        case index===2:
+            document.getElementById('content2').style.display="none";
+            document.getElementById('content3').style.display="block";
+        break;
+    }
         slider.classList.add('slider-animation');
         slider.addEventListener('animationend',()=>{
         slider.classList.remove('slider-animation');
         })
     slider.src=sliderMainPic[index];
     if(index>=sliderMainPic.length-1){
+    document.getElementById('content3').style.display="none";
+    document.getElementById('content1').style.display="block";
        return index=0;
     }
 }
-setInterval(nextSlide,5000)
+setInterval(nextSlide,7000)
 /* slider */
