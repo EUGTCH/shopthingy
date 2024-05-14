@@ -139,6 +139,12 @@
     background-color: var(--primery-color);
     border-radius: 50px;
 }
+.bg-custom{
+    border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
 .image-con{
     width:200px;
     height: 150px;
@@ -154,6 +160,11 @@
     left: 136px;
     top: 64px;
     position: absolute;
+    height: 10px;
+}
+.main-container::-webkit-scrollbar-thumb{
+    background-color: var(--primery-color);
+    border-radius: 25px;
 }
 .product-content{
     width: 100%;
