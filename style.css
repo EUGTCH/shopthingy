@@ -114,6 +114,7 @@
 
 .mybackground{
     background-color: var(--primery-color);
+    border-radius: 50px;
 }
 .box{
     width: 200px;
@@ -121,3 +122,9 @@
 }
 
 /*my style end*/
+.inner-box{
+    background-color: var(--secondery-blue-color);
+    width:200px;
+    height: 200px;
+    border-radius: 25px;
+}
