@@ -152,6 +152,7 @@ box-shadow:  20px 20px 60px #bebebe,
 .main-container{
     overflow-x: scroll;
     height: 300px;
+    padding: 20px;
 }
 .main-container::-webkit-scrollbar{
     -webkit-appearance: none;
@@ -180,4 +181,10 @@ box-shadow:  20px 20px 60px #bebebe,
 }
 #add-Card:hover{
     background-color: var(--secondery-blue-color);
+}
+.image-product{
+    border-radius: 50%;
+    border: 1px solid var(--primery-color);
+    box-shadow:  3px 3px 10px var(--primery-color),
+    -3px -3px 10px var(--primery-color);
 }
