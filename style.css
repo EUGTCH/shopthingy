@@ -113,12 +113,6 @@
 
 /*my style start*/
 
-.mybackground{
-    background-color: var(--primery-color);
-    border-radius: 50px;
-}
-<<<<<<< HEAD
-/*my style end*/
 .image-con{
     width:200px;
     height: 150px;
@@ -157,37 +151,4 @@
 }
 #add-Card:hover{
     background-color: var(--secondery-blue-color);
-=======
-.box{
-    width: 200px;
-    height: 400px ;
-    position: relative;
-}
-
-/*my style end*/
-.inner-box{
-    background-color: var(--secondery-blue-color);
-    width: 100px;
-    height: 130px;
-    border-radius: 25px;
-    left: 136px;
-    top: 64px;
-    position: absolute;
-}
-.inner-box1{
-    background-color: var(--secondery-blue-color);
-    width: 100px;
-    height: 130px;
-    border-radius: 25px;
-    left: 136px;
-    top: 234px;
-    position: absolute;
-}
-.circle{
-    background-color: var(--secondery-blue-color); 
-    border-radius: 50%; 
-    width: 150px;
-    height: 150px;
-
->>>>>>> 8b91d4791eeefbcda607246ae85150cfa725495f
 }
