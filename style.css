@@ -2,6 +2,7 @@
     --primery-color:#3454d1;
     --secondery-blue-color:#34d1bf;
     --ourlight-color:#efefef;
+    --dark-color:#070707;
 }
 .bg-primery{
     background-color:var(--primery-color)!important;
@@ -125,6 +126,7 @@
     background-color: var(--primery-color);
     border-radius: 50px;
 }
+/*my style end*/
 .image-con{
     width:200px;
     height: 150px;
@@ -133,12 +135,34 @@
     overflow-x: scroll;
     height: 300px;
 }
+.bg-custom{
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
 .main-container::-webkit-scrollbar{
     -webkit-appearance: none;
+    height: 10px;
     background-color: var(--ourlight-color);
     border-radius: 25px;
 }
 .main-container::-webkit-scrollbar-thumb{
     background-color: var(--primery-color);
     border-radius: 25px;
+}
+.product-content{
+    width: 100%;
+    display: block;
+}
+.content-box{
+    height: 80%;
+    color: var(--dark-color);
+}
+#add-Card{
+    background-color: var(--primery-color);
+    color: var(--ourlight-color);
+}
+#add-Card:hover{
+    background-color: var(--secondery-blue-color);
 }
