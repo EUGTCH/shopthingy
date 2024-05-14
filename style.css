@@ -109,10 +109,15 @@
 }
 
 /*slider animation*/
-.line{
+
+/*my style start*/
+
+.mybackground{
     background-color: var(--primery-color);
-    width: 80%;
-    height:10px;
-    margin: 5% 10%;
-    border-radius: 50%;
 }
+.box{
+    width: 200px;
+    height: 400px ;
+}
+
+/*my style end*/
