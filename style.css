@@ -2,6 +2,7 @@
     --primery-color:#3454d1;
     --secondery-blue-color:#34d1bf;
     --ourlight-color:#efefef;
+    --dark-color:#070707;
 }
 .bg-primery{
     background-color:var(--primery-color)!important;
@@ -109,29 +110,14 @@
 }
 
 /*slider animation*/
-
-/*my style start*/
-
-.mybackground{
+.line{
+    width: 80%;
+    height: 10px;
+    margin: 5% 10%;
     background-color: var(--primery-color);
-    border-radius: 50px;
+    border-radius: 50%;
 }
-.box{
-    width: 200px;
-    height: 400px ;
-    position: relative;
-}
-
-/*my style end*/
-.inner-box{
-    background-color: var(--secondery-blue-color);
-    width: 100px;
-    height: 130px;
-    border-radius: 25px;
-    left: 136px;
-    top: 64px;
-    position: absolute;
-}
+/*my style start*/
 .inner-box1{
     background-color: var(--secondery-blue-color);
     width: 100px;
@@ -143,11 +129,55 @@
 }
 .circle{
     background-color: var(--secondery-blue-color); 
-    border-radius: 100%; 
-    height: 200px;
-    width: 200px !important;
-    left: 500px;
-    top: 150px;
-    padding: 0;
+    border-radius: 50%; 
+    width: 150px;
+    height: 150px;
+
+}
+/* my style end*/
+.mybackground{
+    background-color: var(--primery-color);
+    border-radius: 50px;
+}
+.bg-custom{
+    border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+.image-con{
+    width:200px;
+    height: 150px;
+}
+.main-container{
+    overflow-x: scroll;
+    height: 300px;
+}
+.main-container::-webkit-scrollbar{
+    -webkit-appearance: none;
+    background-color: var(--ourlight-color);
+    border-radius: 25px;
+    left: 136px;
+    top: 64px;
     position: absolute;
+    height: 10px;
+}
+.main-container::-webkit-scrollbar-thumb{
+    background-color: var(--primery-color);
+    border-radius: 25px;
+}
+.product-content{
+    width: 100%;
+    display: block;
+}
+.content-box{
+    height: 80%;
+    color: var(--dark-color);
+}
+#add-Card{
+    background-color: var(--primery-color);
+    color: var(--ourlight-color);
+}
+#add-Card:hover{
+    background-color: var(--secondery-blue-color);
 }
