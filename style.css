@@ -112,7 +112,13 @@
 }
 
 /*slider animation*/
-
+.line{
+    width: 80%;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primery-color);
+    margin: 5% 10%;
+}
 /*my style start*/
 
 .mybackground{
@@ -125,6 +131,7 @@
 }
 .main-container{
     overflow-x: scroll;
+    height: 300px;
 }
 .main-container::-webkit-scrollbar{
     -webkit-appearance: none;
