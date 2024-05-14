@@ -109,3 +109,10 @@
 }
 
 /*slider animation*/
+.line{
+    background-color: var(--primery-color);
+    width: 80%;
+    height:10px;
+    margin: 5% 10%;
+    border-radius: 50%;
+}
