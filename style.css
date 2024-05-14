@@ -42,6 +42,9 @@
     }
 }
 /*slider animation*/
+#slider{
+    height: 500px;
+}
 .slider-animation{
     animation: fadein 2s;
     opacity: 0;
@@ -116,7 +119,23 @@
     margin: 5% 10%;
     border-radius: 50%;
 }
+.main-box{
+    height: 300px;
+    margin:5px 20px;
+}
 .image-con{
     width:200px;
     height: 150px;
+}
+.main-container{
+    overflow-x: scroll;  
+}
+.main-container::-webkit-scrollbar{
+    -webkit-appearance: none;
+    background-color: var(--ourlight-color);
+    border-radius: 25px;
+}
+.main-container::-webkit-scrollbar-thumb{
+    background-color: var(--primery-color);
+    border-radius: 25px;
 }
