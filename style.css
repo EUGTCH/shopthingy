@@ -132,3 +132,12 @@
     top: 64px;
     position: absolute;
 }
+.inner-box1{
+    background-color: var(--secondery-blue-color);
+    width: 100px;
+    height: 130px;
+    border-radius: 25px;
+    left: 136px;
+    top: 234px;
+    position: absolute;
+}
