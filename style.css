@@ -124,7 +124,7 @@
     height: 150px;
 }
 .main-container{
-    overflow-x: scroll;  
+    overflow-x: scroll;
 }
 .main-container::-webkit-scrollbar{
     -webkit-appearance: none;
