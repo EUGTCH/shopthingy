@@ -146,5 +146,7 @@
     border-radius: 50%; 
     width: 150px;
     height: 150px;
-
+    left: 250px;
+    top: 234px;
+    position: absolute;
 }
