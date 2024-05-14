@@ -119,14 +119,16 @@
 .box{
     width: 200px;
     height: 400px ;
+    position: relative;
 }
 
 /*my style end*/
 .inner-box{
     background-color: var(--secondery-blue-color);
-    width: 200px;
+    width: 100px;
     height: 130px;
     border-radius: 25px;
-    margin-left: 136px;
-    margin-top: 64px;
+    left: 136px;
+    top: 64px;
+    position: absolute;
 }
