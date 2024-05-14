@@ -40,5 +40,5 @@ function nextSlide(){
        return index=0;
     }
 }
-setInterval(nextSlide,7000)
+setInterval(nextSlide,3000)
 /* slider */
