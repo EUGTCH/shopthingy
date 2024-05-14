@@ -124,7 +124,9 @@
 /*my style end*/
 .inner-box{
     background-color: var(--secondery-blue-color);
-    width:200px;
-    height: 200px;
+    width: 200px;
+    height: 130px;
     border-radius: 25px;
+    margin-left: 136px;
+    margin-top: 64px;
 }
