@@ -109,3 +109,15 @@
 }
 
 /*slider animation*/
+
+/*my style start*/
+
+.mybackground{
+    background-color: var(--primery-color);
+}
+.box{
+    width: 200px;
+    height: 500px ;
+}
+
+/*my style end*/
