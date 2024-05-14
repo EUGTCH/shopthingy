@@ -141,3 +141,10 @@
     top: 234px;
     position: absolute;
 }
+.circle{
+    background-color: var(--secondery-blue-color); 
+    border-radius: 50%; 
+    width: 150px;
+    height: 150px;
+
+}
