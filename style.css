@@ -117,6 +117,8 @@
     background-color: var(--primery-color);
     border-radius: 50px;
 }
+<<<<<<< HEAD
+/*my style end*/
 .image-con{
     width:200px;
     height: 150px;
@@ -125,9 +127,48 @@
     overflow-x: scroll;
     height: 300px;
 }
+.bg-custom{
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
 .main-container::-webkit-scrollbar{
     -webkit-appearance: none;
+    height: 10px;
     background-color: var(--ourlight-color);
+    border-radius: 25px;
+}
+.main-container::-webkit-scrollbar-thumb{
+    background-color: var(--primery-color);
+    border-radius: 25px;
+}
+.product-content{
+    width: 100%;
+    display: block;
+}
+.content-box{
+    height: 80%;
+    color: var(--dark-color);
+}
+#add-Card{
+    background-color: var(--primery-color);
+    color: var(--ourlight-color);
+}
+#add-Card:hover{
+    background-color: var(--secondery-blue-color);
+=======
+.box{
+    width: 200px;
+    height: 400px ;
+    position: relative;
+}
+
+/*my style end*/
+.inner-box{
+    background-color: var(--secondery-blue-color);
+    width: 100px;
+    height: 130px;
     border-radius: 25px;
     left: 136px;
     top: 64px;
@@ -148,19 +189,5 @@
     width: 150px;
     height: 150px;
 
-}
-.product-content{
-    width: 100%;
-    display: block;
-}
-.content-box{
-    height: 80%;
-    color: var(--dark-color);
-}
-#add-Card{
-    background-color: var(--primery-color);
-    color: var(--ourlight-color);
-}
-#add-Card:hover{
-    background-color: var(--secondery-blue-color);
+>>>>>>> 8b91d4791eeefbcda607246ae85150cfa725495f
 }
