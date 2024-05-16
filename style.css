@@ -11,6 +11,12 @@
 .bg-ourLight{
     background-color:var(--ourlight-color)!important;
 }
+.linear-color{
+    background-image: linear-gradient(90deg,var(--primery-color),var(--pink-color),var(--secondery-blue-color));
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
 @media only screen and (max-width: 600px) {
     #content1,#content2,#content3{
         font-size: 8px !important;
@@ -228,7 +234,7 @@ padding: 20px;
     from{
         top: -100%;
     }to{
-        top: 60%;
+        top: 100%;
     }
 }
 /*end modal*/
