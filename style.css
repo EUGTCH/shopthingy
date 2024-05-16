@@ -232,3 +232,19 @@ padding: 20px;
     }
 }
 /*end modal*/
+/*start footer*/
+.footer-box{
+    margin: 5% 10%;
+    width: 80%;
+    height: 400px;
+    background-image: linear-gradient(45deg,var(--secondery-blue-color),var(--ourlight-color),var(--pink-color),var(--primery-color));
+    border-radius: 25px;
+    box-shadow: inset 20px 20px 150px #bebebe,
+    inset -20px -20px 150px #ffffff;
+}
+.copyRight{
+    width: 100%;
+    background-color: var(--primery-color);
+    color: var(--ourlight-color);
+}
+/*end footer*/
