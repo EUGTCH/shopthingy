@@ -43,4 +43,23 @@ function nextSlide(){
 }
 setInterval(nextSlide,3000)
 /* slider */
+/* add to cart modal*/
+let inptQty=$.querySelectorAll(".qntNum");
+let btnToBuy=$.querySelectorAll(".addTo-Card");
+let modalShop=$.querySelector('.container-modal')
+btnToBuy.forEach(function(btns){
+    btns.addEventListener('click',(e)=>{
+        modalShop.style.display="block";
+        modalShop.classList.add('modal-scroll')
+        window.addEventListener('click',hidemodal)
+        // function hidemodal(){
+        //     if(modalShop.style.display="block"){
+        //         modalShop.style.display="none"
+        //     }
+        // }
+        console.log(e)
+    })
+})
+/* add to cart modal*/
+
 
