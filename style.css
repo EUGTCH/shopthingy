@@ -5,6 +5,9 @@
     --dark-color:#070707;
     --pink-color:#d1345b;
 }
+.bg-custom-light{
+    background-color: var(--ourlight-color);
+}
 .bg-primery{
     background-color:var(--primery-color)!important;
 }
@@ -239,6 +242,9 @@ padding: 20px;
 }
 /*end modal*/
 /*start footer*/
+.footer{
+    background-color: var(--primery-color);
+}
 .footer-box{
     margin: 5% 10%;
     width: 80%;

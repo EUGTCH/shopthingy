@@ -1,4 +1,16 @@
 var $=document;
+let colorChangerF=$.querySelector('#primery-color');
+let colorChangerS=$.querySelector('#secondry-color');
+colorChangerF.addEventListener('input',()=>{
+    let colorPick=colorChangerF.value;
+    console.log(colorPick)
+    document.documentElement.style.setProperty('--primery-color',colorPick)
+})
+colorChangerS.addEventListener('input',()=>{
+    let colorPick=colorChangerS.value;
+    console.log(colorPick)
+    document.documentElement.style.setProperty('--ourlight-color',colorPick)
+})
 /* slider */
 let sliderMainPic=[
     sliderPic="image/slider/shopping-concept-close-up-portrait-young-beautiful-attractive-redhair-girl-smiling-looking-camera.jpg",
