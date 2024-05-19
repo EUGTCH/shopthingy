@@ -58,6 +58,7 @@ let showItems=$.getElementById('show-item-shop');
 let modalShop=$.querySelector('.container-modal')
 let cardShop=$.getElementById('card');
 let inptQty=$.querySelectorAll(".qntNum");
+let showPayment=$.getElementById('show-payment');
 let shopItems=[
     {name:"razer headphone",price:150,urlimage:"image/product/1.jpg"},
     {name:"pro n2",price:75,urlimage:"image/product/2.jpg"},
@@ -70,6 +71,8 @@ let shopItems=[
     {name:"razer headphone",price:150,urlimage:"image/product/9.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/10.jpg"}
 ]
+let priceArray=[]
+let y=0
 function modalshopcard(card,imgUrl,itemName,itemPrice,qnty){
     let newtr=$.createElement('tr');
     let newtdItem=$.createElement('td');
@@ -85,6 +88,10 @@ function modalshopcard(card,imgUrl,itemName,itemPrice,qnty){
     let newtdqny=$.createElement('td');
     newtdqny.setAttribute('scope',"col");
     newtdqny.innerHTML=qnty;
+    let priceCounter=itemPrice;
+    let amountCounter=qnty
+    let xcounter=priceCounter*amountCounter
+    priceArray.push(xcounter)
     let removeBtn=$.createElement('button')
     removeBtn.innerHTML="remove"
     removeBtn.className="btn btn-outline-info float-end"
@@ -93,14 +100,28 @@ function modalshopcard(card,imgUrl,itemName,itemPrice,qnty){
     newtr.append(newtdItem,newtdprice,newtdqny);
     newtdItem.append(tdImg,itemNames);
     newtdqny.append(removeBtn)
-    removeElement(removeBtn);
+    removeElement(removeBtn,y);
+    allpaices(priceArray,y)
+}
+function allpaices(priceArray,y){
+    for(let i=0;i<priceArray.length;i++){
+        
+        let x=priceArray[i];
+        y=y+x;
+        showPayment.innerHTML=y
+    }
+
 }
 //remove item from shopping basket
-function removeElement (removent){
+function removeElement (removent,y){
     removent.addEventListener('click',(e)=>{
         let currentrow=e.target.parentElement.parentElement;
         currentrow.remove();
-    })
+        let removeprice=Number(e.target.parentElement.parentElement.firstChild.nextSibling.innerHTML);
+        y=Number(showPayment.innerHTML)
+        y=y-removeprice;
+        console.log(y)
+    }) 
 }
 //remove item from shopping basket
 
@@ -121,7 +142,7 @@ function shopItemGenerator(items,show){
         spanName.innerHTML=shopItems[i].name;
         let spanPrice=$.createElement('span')
         spanPrice.className="py-1 product-content text-center";
-        spanPrice.innerHTML=shopItems[i].price+"€";
+        spanPrice.innerHTML=shopItems[i].price;
         let inputDiv=$.createElement('div');
         inputDiv.className="d-flex";
         let inptQty=$.createElement('input')
@@ -156,9 +177,8 @@ function addtocartandModal(btns,modal){
                 modal.classList.add('modal-scroll')
                 let imgUrl=e.target.parentElement.parentElement.previousElementSibling.src;
                 let itemName=e.target.parentElement.parentElement.firstChild.innerHTML;
-                let itemPrice=e.target.parentElement.parentElement.firstChild.nextSibling.innerHTML;
+                let itemPrice=Number(e.target.parentElement.parentElement.firstChild.nextSibling.innerHTML);
                 let qnty=Number(e.target.parentElement.firstChild.value);
-                console.log(qnty);
                 modalshopcard(cardShop,imgUrl,itemName,itemPrice,qnty);
             }
         })
