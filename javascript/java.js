@@ -55,23 +55,69 @@ function nextSlide(){
 }
 setInterval(nextSlide,3000)
 /* slider */
-/* add to cart modal*/
-let inptQty=$.querySelectorAll(".qntNum");
-let btnToBuy=$.querySelectorAll(".addTo-Card");
+let showItems=$.getElementById('show-item-shop');
 let modalShop=$.querySelector('.container-modal')
-btnToBuy.forEach(function(btns){
-    btns.addEventListener('click',(e)=>{
-        modalShop.style.display="block";
-        modalShop.classList.add('modal-scroll')
-        window.addEventListener('click',hidemodal)
-        // function hidemodal(){
-        //     if(modalShop.style.display="block"){
-        //         modalShop.style.display="none"
-        //     }
-        // }
-        console.log(e)
+let shopItems=[
+    {name:"razer headphone",price:150,urlimage:"image/product/1.jpg"},
+    {name:"razer headphone",price:150,urlimage:"image/product/2.jpg"},
+    {name:"razer headphone",price:150,urlimage:"image/product/3.jpg"},
+    {name:"razer headphone",price:150,urlimage:"image/product/4.jpg"},
+    {name:"razer headphone",price:150,urlimage:"image/product/5.jpg"},
+    {name:"razer headphone",price:150,urlimage:"image/product/6.jpg"},
+    {name:"razer headphone",price:150,urlimage:"image/product/7.jpg"},
+    {name:"razer headphone",price:150,urlimage:"image/product/8.jpg"},
+    {name:"razer headphone",price:150,urlimage:"image/product/9.jpg"},
+    {name:"razer headphone",price:150,urlimage:"image/product/10.jpg"}
+]
+
+function shopItemGenerator(items,show){
+    let i=0;
+    items.forEach(function(item){
+        let mainDiv=$.createElement('div');
+        mainDiv.className="main-box mx-3";
+        let innerDiv=$.createElement('div');
+        innerDiv.className="image-con text-center";
+        let itemImage=$.createElement('img');
+        itemImage.className="image-product";
+        itemImage.setAttribute('src',shopItems[i].urlimage);
+        let contentDiv=$.createElement('div');
+        contentDiv.className="content-box flex flex-wrap";
+        let spanName=$.createElement('span')
+        spanName.className="py-1 product-content text-center";
+        spanName.innerHTML=shopItems[i].name;
+        let spanPrice=$.createElement('span')
+        spanPrice.className="py-1 product-content text-center";
+        spanPrice.innerHTML=shopItems[i].price+"€";
+        let inputDiv=$.createElement('div');
+        inputDiv.className="d-flex";
+        let inptQty=$.createElement('input')
+        inptQty.className="col-md-6 form-control qntNum"
+        inptQty.setAttribute('type','number')
+        let btnI=$.createElement('button');
+        btnI.className="addTo-Card col-md-6  btn  fa-solid fa-cart-plus py-2"
+        btnI.setAttribute('id','add-Card');
+        
+
+        show.append(mainDiv);
+        mainDiv.append(innerDiv);
+        innerDiv.append(itemImage,contentDiv)
+        contentDiv.append(spanName,spanPrice,inputDiv);
+        inputDiv.append(inptQty,btnI)
+        i++
     })
-})
+    let inptQty=$.querySelectorAll(".qntNum");
+    let btnToBuy=$.querySelectorAll(".addTo-Card");
+    addtocartandModal(btnToBuy,modalShop)
+}
 /* add to cart modal*/
 
-
+function addtocartandModal(btns,modal){
+    btns.forEach(function(btn){
+        btn.addEventListener('click',()=>{
+            modal.style.display="block";
+            modal.classList.add('modal-scroll')
+        })
+    })
+}
+/* add to cart modal*/
+shopItemGenerator(shopItems,showItems);

@@ -219,6 +219,8 @@ box-shadow: inset 10px 10px 20px #bebebe,
     background-color: var(--secondery-blue-color);
 }
 .image-product{
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 1px solid var(--primery-color);
     box-shadow:  3px 3px 10px var(--primery-color),
