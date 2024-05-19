@@ -60,7 +60,7 @@ let cardShop=$.getElementById('card');
 let inptQty=$.querySelectorAll(".qntNum");
 let shopItems=[
     {name:"razer headphone",price:150,urlimage:"image/product/1.jpg"},
-    {name:"razer headphone",price:150,urlimage:"image/product/2.jpg"},
+    {name:"pro n2",price:75,urlimage:"image/product/2.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/3.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/4.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/5.jpg"},
@@ -85,11 +85,25 @@ function modalshopcard(card,imgUrl,itemName,itemPrice,qnty){
     let newtdqny=$.createElement('td');
     newtdqny.setAttribute('scope',"col");
     newtdqny.innerHTML=qnty;
+    let removeBtn=$.createElement('button')
+    removeBtn.innerHTML="remove"
+    removeBtn.className="btn btn-outline-info float-end"
+    removeBtn.setAttribute('id','removeBtnId');
     card.append(newtr)
     newtr.append(newtdItem,newtdprice,newtdqny);
     newtdItem.append(tdImg,itemNames);
-
+    newtdqny.append(removeBtn)
+    removeElement(removeBtn);
 }
+//remove item from shopping basket
+function removeElement (removent){
+    removent.addEventListener('click',(e)=>{
+        let currentrow=e.target.parentElement.parentElement;
+        currentrow.remove();
+    })
+}
+//remove item from shopping basket
+
 function shopItemGenerator(items,show){
     let i=0;
     items.forEach(function(item){
@@ -134,14 +148,19 @@ function shopItemGenerator(items,show){
 function addtocartandModal(btns,modal){
     btns.forEach(function(btn){
         btn.addEventListener('click',(e)=>{
-            modal.style.display="block";
-            modal.classList.add('modal-scroll')
-            let imgUrl=e.target.parentElement.parentElement.previousElementSibling.src;
-            let itemName=e.target.parentElement.parentElement.firstChild.innerHTML;
-            let itemPrice=e.target.parentElement.parentElement.firstChild.nextSibling.innerHTML;
-            let qnty=Number(e.target.parentElement.firstChild.value);
-            console.log(qnty);
-            modalshopcard(cardShop,imgUrl,itemName,itemPrice,qnty);
+            if(e.target.parentElement.firstChild.value<=0){
+                alert("enter true quantity")
+            }else{
+
+                modal.style.display="block";
+                modal.classList.add('modal-scroll')
+                let imgUrl=e.target.parentElement.parentElement.previousElementSibling.src;
+                let itemName=e.target.parentElement.parentElement.firstChild.innerHTML;
+                let itemPrice=e.target.parentElement.parentElement.firstChild.nextSibling.innerHTML;
+                let qnty=Number(e.target.parentElement.firstChild.value);
+                console.log(qnty);
+                modalshopcard(cardShop,imgUrl,itemName,itemPrice,qnty);
+            }
         })
     })
 }
