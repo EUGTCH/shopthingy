@@ -29,7 +29,6 @@ if(index===0){
     document.getElementById('content1').style.display="block";
 }
 function nextSlide(){
-    console.log(index)
     index++
     switch(true){
         case index===1:
@@ -145,5 +144,10 @@ function addtocartandModal(btns,modal){
         })
     })
 }
-/* add to cart modal*/
 shopItemGenerator(shopItems,showItems);
+/* add to cart modal*/
+let modalClose=$.querySelector('#modal-close');
+modalClose.addEventListener('click',()=>{
+    modalShop.style.display="none";
+    modalShop.classList.remove('modal-scroll')
+})
