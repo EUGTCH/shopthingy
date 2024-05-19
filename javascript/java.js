@@ -57,6 +57,7 @@ setInterval(nextSlide,3000)
 let showItems=$.getElementById('show-item-shop');
 let modalShop=$.querySelector('.container-modal')
 let cardShop=$.getElementById('card');
+let inptQty=$.querySelectorAll(".qntNum");
 let shopItems=[
     {name:"razer headphone",price:150,urlimage:"image/product/1.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/2.jpg"},
@@ -69,7 +70,7 @@ let shopItems=[
     {name:"razer headphone",price:150,urlimage:"image/product/9.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/10.jpg"}
 ]
-function modalshopcard(card,imgUrl,itemName,itemPrice){
+function modalshopcard(card,imgUrl,itemName,itemPrice,qnty){
     let newtr=$.createElement('tr');
     let newtdItem=$.createElement('td');
     newtdItem.setAttribute('scope',"col")
@@ -83,12 +84,10 @@ function modalshopcard(card,imgUrl,itemName,itemPrice){
     newtdprice.innerHTML=itemPrice
     let newtdqny=$.createElement('td');
     newtdqny.setAttribute('scope',"col");
-
+    newtdqny.innerHTML=qnty;
     card.append(newtr)
     newtr.append(newtdItem,newtdprice,newtdqny);
     newtdItem.append(tdImg,itemNames);
-    newtdprice.append(newtdprice);
-
 
 }
 function shopItemGenerator(items,show){
@@ -112,6 +111,7 @@ function shopItemGenerator(items,show){
         let inputDiv=$.createElement('div');
         inputDiv.className="d-flex";
         let inptQty=$.createElement('input')
+        inptQty.setAttribute('value','0')
         inptQty.className="col-md-6 form-control qntNum"
         inptQty.setAttribute('type','number')
         let btnI=$.createElement('button');
@@ -126,7 +126,6 @@ function shopItemGenerator(items,show){
         inputDiv.append(inptQty,btnI)
         i++
     })
-    let inptQty=$.querySelectorAll(".qntNum");
     let btnToBuy=$.querySelectorAll(".addTo-Card");
     addtocartandModal(btnToBuy,modalShop)
 }
@@ -140,7 +139,9 @@ function addtocartandModal(btns,modal){
             let imgUrl=e.target.parentElement.parentElement.previousElementSibling.src;
             let itemName=e.target.parentElement.parentElement.firstChild.innerHTML;
             let itemPrice=e.target.parentElement.parentElement.firstChild.nextSibling.innerHTML;
-            modalshopcard(cardShop,imgUrl,itemName,itemPrice);
+            let qnty=Number(e.target.parentElement.firstChild.value);
+            console.log(qnty);
+            modalshopcard(cardShop,imgUrl,itemName,itemPrice,qnty);
         })
     })
 }
