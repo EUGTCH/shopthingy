@@ -57,6 +57,7 @@ setInterval(nextSlide,3000)
 /* slider */
 let showItems=$.getElementById('show-item-shop');
 let modalShop=$.querySelector('.container-modal')
+let cardShop=$.getElementById('card');
 let shopItems=[
     {name:"razer headphone",price:150,urlimage:"image/product/1.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/2.jpg"},
@@ -69,7 +70,28 @@ let shopItems=[
     {name:"razer headphone",price:150,urlimage:"image/product/9.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/10.jpg"}
 ]
+function modalshopcard(card,imgUrl,itemName,itemPrice){
+    let newtr=$.createElement('tr');
+    let newtdItem=$.createElement('td');
+    newtdItem.setAttribute('scope',"col")
+    let tdImg=$.createElement('img');
+    tdImg.className="card-item-pic"
+    tdImg.setAttribute('src',imgUrl)
+    let itemNames=$.createElement('span')
+    itemNames.innerHTML=itemName;
+    let newtdprice=$.createElement('td');
+    newtdprice.setAttribute('scope',"col");
+    newtdprice.innerHTML=itemPrice
+    let newtdqny=$.createElement('td');
+    newtdqny.setAttribute('scope',"col");
 
+    card.append(newtr)
+    newtr.append(newtdItem,newtdprice,newtdqny);
+    newtdItem.append(tdImg,itemNames);
+    newtdprice.append(newtdprice);
+
+
+}
 function shopItemGenerator(items,show){
     let i=0;
     items.forEach(function(item){
@@ -113,9 +135,13 @@ function shopItemGenerator(items,show){
 
 function addtocartandModal(btns,modal){
     btns.forEach(function(btn){
-        btn.addEventListener('click',()=>{
+        btn.addEventListener('click',(e)=>{
             modal.style.display="block";
             modal.classList.add('modal-scroll')
+            let imgUrl=e.target.parentElement.parentElement.previousElementSibling.src;
+            let itemName=e.target.parentElement.parentElement.firstChild.innerHTML;
+            let itemPrice=e.target.parentElement.parentElement.firstChild.nextSibling.innerHTML;
+            modalshopcard(cardShop,imgUrl,itemName,itemPrice);
         })
     })
 }

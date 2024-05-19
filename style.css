@@ -258,6 +258,10 @@ padding: 20px;
         top: 100%;
     }
 }
+.card-item-pic{
+    width: 50px;
+    height: 50px;
+}
 /*end modal*/
 /*start footer*/
 .footer{
