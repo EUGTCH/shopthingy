@@ -62,11 +62,11 @@ let showPayment=$.getElementById('show-payment');
 let shopItems=[
     {name:"razer headphone",price:150,urlimage:"image/product/1.jpg"},
     {name:"pro n2",price:75,urlimage:"image/product/2.jpg"},
-    {name:"razer headphone",price:150,urlimage:"image/product/3.jpg"},
-    {name:"razer headphone",price:150,urlimage:"image/product/4.jpg"},
-    {name:"razer headphone",price:150,urlimage:"image/product/5.jpg"},
-    {name:"razer headphone",price:150,urlimage:"image/product/6.jpg"},
-    {name:"razer headphone",price:150,urlimage:"image/product/7.jpg"},
+    {name:"razer headphone",price:15,urlimage:"image/product/3.jpg"},
+    {name:"razer headphone",price:50,urlimage:"image/product/4.jpg"},
+    {name:"razer headphone",price:145,urlimage:"image/product/5.jpg"},
+    {name:"razer headphone",price:145,urlimage:"image/product/6.jpg"},
+    {name:"razer headphone",price:120,urlimage:"image/product/7.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/8.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/9.jpg"},
     {name:"razer headphone",price:150,urlimage:"image/product/10.jpg"}
