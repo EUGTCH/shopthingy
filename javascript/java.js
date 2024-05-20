@@ -122,7 +122,7 @@ function removeElement (priceArray,removent,y,qnty){
         let xcounter=priceCounter*amountCounter
         y=Number(showPayment.innerHTML);
         let indexHolder=priceArray.indexOf(xcounter);
-        priceArray.splice(indexHolder,indexHolder+1)
+        priceArray.splice(indexHolder,indexHolder+1);
         console.log(indexHolder)
         showPayment.innerHTML=y-xcounter;
     }) 
