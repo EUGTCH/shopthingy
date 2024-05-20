@@ -100,7 +100,7 @@ function modalshopcard(card,imgUrl,itemName,itemPrice,qnty){
     newtr.append(newtdItem,newtdprice,newtdqny);
     newtdItem.append(tdImg,itemNames);
     newtdqny.append(removeBtn)
-    removeElement(removeBtn,y);
+    removeElement(priceArray,removeBtn,y,qnty);
     allpaices(priceArray,y)
 }
 function allpaices(priceArray,y){
@@ -113,14 +113,18 @@ function allpaices(priceArray,y){
 
 }
 //remove item from shopping basket
-function removeElement (removent,y){
+function removeElement (priceArray,removent,y,qnty){
     removent.addEventListener('click',(e)=>{
         let currentrow=e.target.parentElement.parentElement;
         currentrow.remove();
-        let removeprice=Number(e.target.parentElement.parentElement.firstChild.nextSibling.innerHTML);
-        y=Number(showPayment.innerHTML)
-        y=y-removeprice;
-        console.log(y)
+        let priceCounter=Number(e.target.parentElement.parentElement.firstChild.nextSibling.innerHTML);
+        let amountCounter=qnty
+        let xcounter=priceCounter*amountCounter
+        y=Number(showPayment.innerHTML);
+        let indexHolder=priceArray.indexOf(xcounter);
+        priceArray.splice(indexHolder,indexHolder+1)
+        console.log(indexHolder)
+        showPayment.innerHTML=y-xcounter;
     }) 
 }
 //remove item from shopping basket
