@@ -62,7 +62,9 @@
     color: var(--primery-color);
 }
 
-
+.picture-fit{
+    object-fit: cover;
+}
 
 @media only screen and (max-width: 600px) {
     #content1,#content2,#content3{
@@ -170,7 +172,7 @@
 /*slider animation*/
 .line{
     width: 80%;
-    height: 10px;
+    height: 5px;
     margin: 5% 10%;
     background-color: var(--primery-color);
     border-radius: 50%;
