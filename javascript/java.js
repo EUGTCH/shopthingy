@@ -195,3 +195,17 @@ modalClose.addEventListener('click',()=>{
     modalShop.style.display="none";
     modalShop.classList.remove('modal-scroll')
 })
+/*scroll to top */
+let scrollTopp=$.querySelector('.scroll-top')
+window.addEventListener('scroll',()=>{
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+            scrollTopp.style.display="block";
+    }else{
+            scrollTopp.style.display="none";
+          }
+})
+scrollTopp.addEventListener('click',()=>{
+document.body.scrollTop=0;
+document.documentElement.scrollTop=0;
+})
+/*scroll to top */
