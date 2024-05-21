@@ -1,3 +1,27 @@
+@charset "utf-8";
+/* fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Acme&family=Pacifico&display=swap');
+  .acme-regular {
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Acme&family=Kalam:wght@300;400;700&family=Pacifico&display=swap');
+  .kalam-regular {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+/* fonts*/
 :root{
     --primery-color:#3454d1;
     --secondery-blue-color:#34d1bf;
@@ -37,6 +61,9 @@
     background-color: var(--ourlight-color);
     color: var(--primery-color);
 }
+
+
+
 @media only screen and (max-width: 600px) {
     #content1,#content2,#content3{
         font-size: 8px !important;
@@ -287,3 +314,35 @@ padding: 20px;
     color: var(--ourlight-color);
 }
 /*end footer*/
+
+/*scroll to top*/
+.scroll-top{
+    cursor: pointer;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 50px;
+    height:50px;
+    background: var(--primery-color);
+    box-shadow:  5px 5px 20px var(--primery-color),
+             -5px -5px 20px var(--primery-color);
+    border-radius: 25px;
+    display: none;
+    animation: btn-scroll .5s;
+    animation-fill-mode: forwards;
+    z-index: 80;
+    color: #cde1f8;
+}
+.scroll-top i{
+    margin: 16px 0;
+}
+@keyframes btn-scroll{
+    from{
+        bottom: -5%;
+    }
+    to{
+        bottom: 5%;
+        right: 5%;
+    }
+}
+/*scroll to top*/
