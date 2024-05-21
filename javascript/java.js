@@ -59,16 +59,15 @@ setInterval(nextSlide,3000)
 let inptQty=$.querySelectorAll(".qntNum");
 let btnToBuy=$.querySelectorAll(".addTo-Card");
 let modalShop=$.querySelector('.container-modal')
+let hideModalBtn=$.getElementById('hide-modal');
 btnToBuy.forEach(function(btns){
     btns.addEventListener('click',(e)=>{
         modalShop.style.display="block";
         modalShop.classList.add('modal-scroll')
-        window.addEventListener('click',hidemodal)
-        // function hidemodal(){
-        //     if(modalShop.style.display="block"){
-        //         modalShop.style.display="none"
-        //     }
-        // }
+        hideModalBtn.addEventListener('click',()=>{
+            modalShop.style.display="none";
+            modalShop.classList.remove('modal-scroll')
+        })
         console.log(e)
     })
 })
